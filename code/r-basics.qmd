@@ -161,6 +161,7 @@ Here we used the `tibble()` function to create the data frame. A `tibble` is alm
 ```{r}
 l.mixed = list(number = 1, 
                character = "2", 
+               character = "3",
                factor = factor(3), 
                matrix = matrix(1:4, ncol = 2),
                df = tibble(x = c(1, 2), y = c(3, 4)))
@@ -170,6 +171,13 @@ l.mixed
 l.mixed$character
 l.mixed[["character"]]
 l.mixed[[2]] 
+```
+
+
+```{r}
+# if we have two characters, the character variables will not store and print both
+l.mixed$character
+l.mixed[[3]]
 ```
 
 Lists are a very flexible data format. You can put almost anything in a list.
